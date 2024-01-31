@@ -1,9 +1,12 @@
 
     <div class="jumbotron text-center">
-      <button class="btn btn-success btn-lg">
+      <button class="btn btn-success btn-lg" (click)="rollDices()">
         Roll dices
       </button>
       <br>
-      <img class="img" src="../assets/img/dice1.png">
-      <img class="img" src="../assets/img/dice2.png">
+      <img class="img" [src]="leftDice">
+      <img class="img" [src]="rightDice">
+      <h1 *ngIf="win">
+        <span class="badge badge-success">You Win!</span>
+      </h1>
     </div>
